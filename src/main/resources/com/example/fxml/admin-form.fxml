@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.controllers.AdminFormController">
+
+    <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="usernameColumn" text="Username"/>
+            <TableColumn fx:id="passwordColumn" text="Password"/>
+            <TableColumn fx:id="roleColumn" text="Role"/>
+            <TableColumn fx:id="emailColumn" text="Email"/>
+            <TableColumn fx:id="creationDateColumn" text="Creation Date"/>
+            <TableColumn fx:id="lastModifiedByColumn" text="Last Modified By"/>
+        </columns>
+    </TableView>
+
+    <HBox>
+        <TextField fx:id="usernameField" promptText="Username"/>
+        <TextField fx:id="passwordField" promptText="Password"/>
+        <TextField fx:id="roleField" promptText="Role"/>
+        <TextField fx:id="emailField" promptText="Email"/>
+        <Button text="Save" onAction="#saveUser"/>
+        <Button text="Delete" onAction="#deleteUser"/>
+        <Button text="Update" onAction="#updateUser"/>
+    </HBox>
+</VBox>
